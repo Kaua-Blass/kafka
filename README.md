@@ -10,18 +10,13 @@
 
 1. **Pré-requisitos**:
    - Docker e Docker Compose instalados.
-   - Python 3.x instalado (caso queira rodar scripts localmente).
+   - Python 3.12.7 instalado (caso queira rodar scripts localmente).
    - Biblioteca `kafka-python` instalada:
      ```bash
      pip install kafka-python
      ```
 
 2. **Configuração do Ambiente**:
-   - Clone o repositório do projeto:
-     ```bash
-     git clone <URL_DO_REPOSITORIO>
-     cd <PASTA_DO_PROJETO>
-     ```
    - Inicie os serviços com Docker Compose:
      ```bash
      docker-compose up --build
@@ -64,7 +59,7 @@
      ```bash
      docker stop kafka3
      ```
-   - Continue utilizando o produtor e consumidor. Verifique que o cluster permanece funcional devido ao fator de replicação.
+   - Continua utilizando o produtor e consumidor. O cluster permanece funcional devido ao fator de replicação.
 
 ### 4. Produtor e Consumidor com Adição de um Novo Nó
    - Adicione um novo broker ao cluster:
@@ -84,26 +79,3 @@
 
 ---
 
-## Novidades em Relação ao Exemplo de Aula
-
-1. **Cluster Kafka Multi-Nó com Alta Disponibilidade**:
-   - Configuração do cluster com fator de replicação.
-   - Testes com falha de um nó e recuperação de dados.
-
-2. **Adição de um Novo Nó ao Cluster**:
-   - Demonstração de como expandir o cluster dinamicamente.
-
-3. **Leitura em Grupo**:
-   - Implementação de consumidores paralelos para processar mensagens em grupos.
-
-4. **Integração com Kafka UI**:
-   - Ferramenta visual para monitorar tópicos, mensagens e configuração do cluster.
-
-5. **Scripts Customizados**:
-   - Produtor e consumidor escritos em Python com personalização via variáveis de ambiente.
-
----
-
-### Observações
-- Todos os scripts foram desenvolvidos com boas práticas, incluindo manuseio de exceções e configuração modular.
-- Para dúvidas, entre em contato com os autores via [email/contato].
